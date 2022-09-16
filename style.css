@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    /*ios bottun color*/
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    /*mac bottun color*/
+    --Light-Blue: hsl(233, 100%, 69%);
+    /*font color*/
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    /*footer background color*/
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*16px = 1.6rem*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.8rem;
+    color: var(--Dark-Grayish-Blue);
+    text-align: center;
+}
+.top-padding{
+    padding: 2em;
+}
+
+.margin-top{
+    margin-top: 3em;
+}
+
+header {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    align-items: center;
+}
+
+header .img {
+    padding: 4em 2em 1em;
+}
+
+img {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+h1 {
+    padding: auto;
+    font-size: 4rem;
+    
+}
+h1, h2, h3{
+    font-weight: 600;
+}
+h2{
+    font-size: 3.2rem;
+
+}
+.snip-feature h3{
+    font-size: 2.4rem;
+}
+
+p {
+    margin: 1em auto 3em;
+    width: 75%;
+    max-width: 650px;
+    word-spacing: 2px;
+    opacity: 0.5;
+}
+.btn a{
+    margin: .5em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: inset 0 -2px 3px var(--Dark-Grayish-Blue);
+    padding: .75em 2em;
+    border-radius: 50px;
+}
+
+.ios{
+    background-color: var(--Strong-Cyan);
+}
+.mac{
+    background-color: var(--Light-Blue);
+}
+
+.content{
+    display: flex;
+}
+
+.snip-feature{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: left;
+}
+.image{
+    width: 65%;
+    margin: auto;
+    
+}
+.content .image > img{
+    transform: translateX(-12rem);
+}
+.snip-feature p{
+    margin: 1em 0;
+}
+.workflow-feature{
+    display: flex;
+
+}
+
+i > svg{
+    margin-bottom: 2em;
+}
+.companies-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.companies-logo div + div{
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+footer{
+    margin-top: 1em;
+    background-color: var(--Grayish-Blue);
+    width: 100%;
+    display: flex;
+    /**/justify-content: space-around;
+    align-items: center;
+}
+
+footer .logo, footer .social{
+    width: 15%;
+    padding: 1em 0;
+}
+footer .logo img{
+    width: 25%;
+}
+footer .links{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: auto;
+    text-align: start;
+    font-weight: 600;
+}
+.contact{
+    grid-column: 1 /2;
+    grid-row: 2 / 3;
+}
+.press{
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+}
+.social i + i{
+    margin-left: 1em;
+}
+
+.social i:hover, .links div:hover{
+    cursor: pointer;
+    color: var(--Strong-Cyan);
+}
+
+
+
+
+@media(max-width: 700px){
+    header{
+    background: url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    header h1{
+        font-size: 2.5rem;
+    
+    }
+    p {
+        font-size: 1.3rem;
+        margin: 1.5em 0;
+        width: 100%;
+        word-spacing: 0;
+        line-height: 1.5em;
+    }
+    .btn{
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+    }
+    .snip .content{
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+    }
+    .snip .image > img{
+        transform: translateX(0rem);
+    }
+    .snip-feature{
+        width: 100%;
+        text-align: center;
+    }
+    .snip-feature h3{
+        margin-top: 1em;
+    }
+    .workflow-feature{
+        flex-direction: column;
+    }
+    .workflow-feature .sub-feature{
+        margin-top: 3em;
+    }
+    .companies-logo{
+        flex-direction: column;
+    }
+    div + div{
+        margin-top: 3em;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    footer .links{
+        grid-template-columns: auto;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    footer .press{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    footer .logo{
+        width: 50%;
+        padding: 3em 0 0;
+    }
+    footer .social{
+        font-size: 3.6rem;
+        width: 100%;
+    }
+}
